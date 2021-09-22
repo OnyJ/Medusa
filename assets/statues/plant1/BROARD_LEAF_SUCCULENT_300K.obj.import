@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/BROARD_LEAF_SUCCULENT_300K.obj-21b6fd27b002033c40556e413a31227f.mesh"
+
+[deps]
+
+files=[ "res://.import/BROARD_LEAF_SUCCULENT_300K.obj-21b6fd27b002033c40556e413a31227f.mesh" ]
+
+source_file="res://assets/statues/plant1/BROARD_LEAF_SUCCULENT_300K.obj"
+dest_files=[ "res://.import/BROARD_LEAF_SUCCULENT_300K.obj-21b6fd27b002033c40556e413a31227f.mesh", "res://.import/BROARD_LEAF_SUCCULENT_300K.obj-21b6fd27b002033c40556e413a31227f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

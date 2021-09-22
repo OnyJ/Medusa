@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Photographer Sculpture_obj.obj-e9018bfb5209538667d118f6c3fb11ec.mesh"
+
+[deps]
+
+files=[ "res://.import/Photographer Sculpture_obj.obj-e9018bfb5209538667d118f6c3fb11ec.mesh" ]
+
+source_file="res://assets/statues/photographer/Photographer Sculpture_obj.obj"
+dest_files=[ "res://.import/Photographer Sculpture_obj.obj-e9018bfb5209538667d118f6c3fb11ec.mesh", "res://.import/Photographer Sculpture_obj.obj-e9018bfb5209538667d118f6c3fb11ec.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

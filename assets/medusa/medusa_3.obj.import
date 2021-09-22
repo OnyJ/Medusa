@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/medusa_3.obj-68b8cc7977d15f63a7f759a5f21fad2b.mesh"
+
+[deps]
+
+files=[ "res://.import/medusa_3.obj-68b8cc7977d15f63a7f759a5f21fad2b.mesh" ]
+
+source_file="res://assets/medusa/medusa_3.obj"
+dest_files=[ "res://.import/medusa_3.obj-68b8cc7977d15f63a7f759a5f21fad2b.mesh", "res://.import/medusa_3.obj-68b8cc7977d15f63a7f759a5f21fad2b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

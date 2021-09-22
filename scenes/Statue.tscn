@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.804482
+height = 3.39058
+
+[node name="Statue" type="MeshInstance"]
+transform = Transform( 0.8, 0, 0, 0, 1.7, 0, 0, 0, 0.8, 0, 1.68338, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1.25, 0, 0, 0, 0.588235, 0, 0, 0, 1.25, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 2 )
