@@ -8,20 +8,20 @@
 [ext_resource path="res://assets/Medusa_black_bg_transparent.png" type="Texture" id=6]
 [ext_resource path="res://assets/controls.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/SztyletBold-aOKK.otf"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 30
 outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 3 )
+font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 24
 font_data = ExtResource( 5 )
 
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -134,12 +134,12 @@ margin_left = 542.718
 margin_top = 674.459
 margin_right = 918.718
 margin_bottom = 712.459
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.298039, 0.137255, 0.803922, 1 )
 text = "Music: Tobu - Turn It Up"
 
 [node name="HUD" type="Control" parent="."]
-theme = SubResource( 2 )
+theme = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
