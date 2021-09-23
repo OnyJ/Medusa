@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://assets/start_button.png" type="Texture" id=2]
 [ext_resource path="res://assets/start_button_pressed.png" type="Texture" id=3]
 [ext_resource path="res://assets/start_button_hover.png" type="Texture" id=4]
-[ext_resource path="res://assets/SztyletBold-aOKK.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/medusa_theme.tres" type="Theme" id=5]
 [ext_resource path="res://assets/Medusa_black_bg_transparent.png" type="Texture" id=6]
 [ext_resource path="res://assets/controls.png" type="Texture" id=7]
 
@@ -15,13 +15,6 @@ font_path = "res://assets/SztyletBold-aOKK.otf"
 size = 30
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 24
-font_data = ExtResource( 5 )
-
-[sub_resource type="Theme" id=4]
-default_font = SubResource( 3 )
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -139,7 +132,7 @@ custom_colors/font_color = Color( 0.298039, 0.137255, 0.803922, 1 )
 text = "Music: Tobu - Turn It Up"
 
 [node name="HUD" type="Control" parent="."]
-theme = SubResource( 4 )
+theme = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -167,5 +160,26 @@ __meta__ = {
 }
 
 [node name="ScoreTimer" type="Timer" parent="HUD"]
+
+[node name="Pause" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 5 )
+
+[node name="PauseBackground" type="ColorRect" parent="Pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.741176, 0.654902, 0.411765 )
+
+[node name="PausedLabel" type="Label" parent="Pause"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Paused"
+align = 1
 [connection signal="pressed" from="Menu/Play" to="." method="_on_Play_pressed"]
 [connection signal="timeout" from="HUD/ScoreTimer" to="." method="_on_ScoreTimer_timeout"]

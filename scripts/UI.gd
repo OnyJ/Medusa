@@ -1,10 +1,13 @@
 extends Control
 
 signal start_game
+signal pause_game
+signal continue_game
 enum {
 	GAMEOVER
 	MENU
 	PLAYING
+	PAUSED
 }
 var state = MENU
 var time_score = 0
@@ -29,6 +32,15 @@ func show_screen(name):
 			$HUD/ScoreBackground.show()
 			$GameOver.hide()
 			$Menu.hide()
+			$Pause.hide()
+		"Pause":
+			state = PAUSED
+			emit_signal("pause_game")
+			$Pause.show()
+		"Continue":
+			state = PLAYING
+			emit_signal("continue_game")
+			$Pause.hide()
 
 
 func _on_Play_pressed():
@@ -43,8 +55,11 @@ func _unhandled_input(event):
 			show_screen("Menu")
 			get_tree().reload_current_scene()
 		elif state == MENU:
-			show_screen("Game")
 			_on_Play_pressed()
+		elif state == PLAYING:
+			show_screen("Pause")
+		elif state == PAUSED:
+			show_screen("Continue")
 
 func _on_ScoreTimer_timeout():
 	time_score += 1

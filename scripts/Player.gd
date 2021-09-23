@@ -9,7 +9,10 @@ onready var main = $"../../../Main"
 
 
 func _physics_process(delta):
-	if main.game_is_started and !main.game_over:
+	if (main.game_is_started 
+		and !main.game_over 
+		and !main.game_paused
+		):
 		handle_player_control(delta)
 
 

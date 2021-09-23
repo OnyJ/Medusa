@@ -23,5 +23,7 @@ current = true
 stream = ExtResource( 4 )
 autoplay = true
 [connection signal="petrified" from="Map" to="." method="_on_Map_petrified"]
+[connection signal="continue_game" from="UI" to="." method="_on_UI_continue_game"]
+[connection signal="pause_game" from="UI" to="." method="_on_UI_pause_game"]
 [connection signal="start_game" from="UI" to="Map" method="_on_UI_start_game"]
 [connection signal="start_game" from="UI" to="." method="_on_UI_start_game"]
